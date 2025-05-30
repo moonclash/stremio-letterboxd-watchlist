@@ -22,7 +22,7 @@ builder.defineCatalogHandler(async () => {
   const movies = await scrapeWatchlist('your_username');
   
   const metas = movies.map(movie => ({
-    id: movie.filmId,
+    id: movie.imdbId,
     name: movie.title,
     type: 'movie',
     poster: movie.posterUrl,
