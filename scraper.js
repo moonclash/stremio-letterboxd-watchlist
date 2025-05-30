@@ -19,6 +19,7 @@ async function scrapeWatchList(username) {
         films.push({
             title,
             posterUrl,
+            filmId,
         });
     });
     return films;
