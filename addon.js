@@ -3,7 +3,7 @@ const scrapeWatchlist = require('./scraper');
 
 const manifest = {
   id: 'org.you.letterboxd.watchlist',
-  version: '1.0.0',
+  version: '1.0.1',
   name: 'Letterboxd Watchlist',
   description: 'Displays your Letterboxd watchlist in Stremio',
   resources: ['catalog'],
