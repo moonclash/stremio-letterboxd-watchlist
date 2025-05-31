@@ -7,12 +7,10 @@ function constructFilmPoster(filmId, filmSlug) {
 }
 
 async function getFilmIMDBId(filmSlug) {
-    console.log(filmSlug);
     const { data } = await axios.get(`https://letterboxd.com/film/${filmSlug}/`);
     const $ = cheerio.load(data);
     const imdbLink = $('a[href*="imdb.com/title/"]').attr('href');
     const imdbId = imdbLink.match(/tt+\d{1,}/)[0];
-    console.log(imdbId);
     return imdbId;
 }
 
